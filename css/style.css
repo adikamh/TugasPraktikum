@@ -1,0 +1,67 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../assets/background.png') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15) !important;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title, h5.fw-bold {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.btn-success {
+    background-color: #2d5a27;
+    border: none;
+    padding: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #1e3d1a;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+input:focus, select:focus {
+    border-color: #2d5a27 !important;
+    box-shadow: 0 0 0 0.25rem rgba(45, 90, 39, 0.25) !important;
+}
+
+footer {
+    border-top: 3px solid #2d5a27;
+}
