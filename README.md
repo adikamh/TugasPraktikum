@@ -1,4 +1,4 @@
-# PCB-KAL Management System 🛠️
+# PCB-KAL Management System
 
 PCB-KAL adalah platform web manajemen manufaktur PCB (Printed Circuit Board) yang menyediakan katalog produk mikrokontroler original dan jasa cetak PCB presisi tinggi menggunakan mesin CNC.
 
