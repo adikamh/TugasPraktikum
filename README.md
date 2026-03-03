@@ -1,4 +1,4 @@
-# PCB-KAL Management System 🛠️
+# PCB-KAL Management System 
 
 PCB-KAL adalah platform web manajemen manufaktur PCB (Printed Circuit Board) yang menyediakan katalog produk mikrokontroler original dan jasa cetak PCB presisi tinggi menggunakan mesin CNC.
 
@@ -21,138 +21,36 @@ PCB-KAL/
 - CSS3: Kustomisasi desain, efek hover, dan background overlay.
 - Bootstrap 5: Framework CSS untuk grid sistem dan komponen UI responsif.
 - Bootstrap Icons: Library ikon grafis bertema teknologi.
+- JavaScript (ES6+): bahasa pemrograman yang menjadi "otak" di balik interaksi website
 
 # Penjelasan Program
 
 * File index.html
-1. Bagian Head (Metadata & Library)
-- Line 1-3: Deklarasi tipe dokumen HTML5, pembukaan tag HTML dengan bahasa Indonesia, dan tag head untuk menampung metadata.
+    Halaman ini merupakan beranda utama untuk sistem manajemen PCB-KAL yang berfokus pada layanan cetak papan sirkuit atau PCB dan penjualan perangkat keras teknologi internet untuk segala. Tampilan situs menggunakan kerangka desain modern sehingga terlihat rapi dan nyaman diakses melalui ponsel maupun komputer. Bagian atas halaman dilengkapi dengan menu navigasi yang berisi tautan beranda, fitur pesanan cetak, tombol daftar keinginan, serta tombol untuk mengubah tema warna menjadi mode gelap.
 
-- Line 4-6: Pengaturan karakter set (UTF-8) untuk mendukung berbagai simbol, pengaturan viewport agar website Responsive (nyaman dibuka di HP), dan pemberian judul tab browser "PCB-KAL".
+    Di bawah bagian menu, terdapat judul besar yang menjelaskan identitas perusahaan sebagai penyedia komponen asli dan jasa pembuatan papan sirkuit presisi. Pengunjung kemudian disuguhkan dengan panel statistik yang menampilkan jumlah total produk, stok yang tersedia, dan kategori barang. Bagian utama halaman ini memajang berbagai produk unggulan seperti komputer mini, modul pengendali, serta bahan papan sirkuit polos lengkap dengan gambar, deskripsi singkat, sisa stok, dan harganya.
 
-- Line 7: Menghubungkan framework Bootstrap 5 melalui CDN untuk layout dan komponen instan.
-
-- Line 8: Menghubungkan Bootstrap Icons untuk menampilkan ikon grafis (seperti ikon CPU).
-
-- Line 9-11: Menghubungkan file CSS Eksternal (style.css) untuk kustomisasi desain buatan sendiri dan penutup bagian head.
-
-2. Bagian Navigasi (Navbar)
-- Line 12-13: Pembukaan tag body dan pembuatan Navbar dengan tema gelap (bg-dark) yang tetap berada di atas saat di-scroll (sticky-top).
-
-- Line 14-15: Kontainer navbar dan pembuatan logo/brand "PCB-KAL" menggunakan ikon CPU dan teks tebal.
-
-- Line 16-18: Pembuatan tombol "Hamburger" yang muncul secara otomatis saat website dibuka di layar HP (fitur responsif).
-
-- Line 19-25: Daftar menu navigasi yang diletakkan di sebelah kanan (ms-auto), berisi link ke halaman "Beranda" (aktif) dan halaman "Cetak PCB".
-
-3. Bagian Hero Section (Header)
-- Line 28: Pembukaan tag header dengan class .hero untuk menampilkan gambar latar belakang dan padding vertikal (py-5).
-
-- Line 29-32: Wadah teks utama yang berisi judul besar (display-4) "PCB Manufaktur Sistem" dan deskripsi singkat sebagai pengantar layanan.
-
-4. Bagian Katalog Produk (Grid & Card)
-- Line 35-36: Kontainer utama konten dengan jarak padding dan judul "Katalog Produk Utama" yang berada di tengah.
-
-- Line 38: Inisialisasi sistem Grid Bootstrap dengan baris (row) dan jarak antar kartu yang lebar (g-5).
-
-- Line 39-41: Pengaturan kolom untuk kartu produk (lebar 4 dari 12 kolom pada layar laptop) dan pembuatan Card dengan bayangan tipis (shadow-sm) tanpa border.
-
-- Line 42: Menampilkan gambar produk dengan tinggi tetap 200px dan object-fit: cover agar gambar tidak gepeng.
-
-- Line 43-46: Pembukaan body kartu menggunakan Flexbox (d-flex flex-column) agar konten di dalamnya bisa diatur secara vertikal. Berisi judul produk dan deskripsi singkat.
-
-- Line 47-50: Penggunaan mt-auto untuk mendorong harga dan tombol ke posisi paling bawah secara otomatis agar Simetris dengan kartu lainnya.
-
-- Line 51-54: Penutup kartu dan kolom produk pertama.
-
-- Line 56-113: Pengulangan struktur kartu yang sama untuk produk NodeMCU, Arduino, ESP32, PCB Polos, dan Jasa Cetak PCB (total 6 produk).
-
-5. Bagian Footer & Script
-- Line 117-119: Pembuatan Footer dengan latar belakang gelap, teks putih, dan informasi hak cipta (copyright) 2026.
-
-- Line 121: Menghubungkan file JavaScript Bootstrap agar fitur interaktif (seperti menu navigasi mobile) dapat berfungsi.
-
-- Line 122-123: Penutup tag body dan html.
+    Setiap kartu produk memiliki tombol untuk melakukan pembelian langsung atau memasukkan barang ke dalam daftar keinginan. Fitur daftar keinginan tersebut dapat dibuka melalui jendela kecil yang muncul di tengah layar untuk memantau barang yang sudah ditandai. Bagian paling bawah ditutup dengan keterangan hak cipta tahun dua ribu dua puluh enam. Secara keseluruhan, kode ini membangun antarmuka toko daring yang fungsional dan interaktif bagi para pecinta elektronika.
 
 * File cetakPcb.html
-1. Bagian Head & Konfigurasi (Line 1-11)
-- Line 1-3: Inisialisasi dokumen HTML5, pengaturan bahasa (Indonesia), dan pembukaan elemen head.
+    Halaman web ini menyediakan formulir khusus untuk memesan pembuatan papan sirkuit cetak atau PCB sesuai dengan desain keinginan pengguna. Antarmuka halaman ini dirancang secara profesional dengan navigasi yang menyertakan menu utama, daftar keinginan, serta tombol untuk mengganti tema tampilan menjadi gelap atau terang. Fokus utama halaman ini terletak pada kartu formulir di bagian tengah yang memungkinkan pelanggan memasukkan spesifikasi teknis untuk proyek mereka secara mendalam.
 
-- Line 4-6: Pengaturan meta charset untuk pengkodean karakter, meta viewport agar tampilan Responsif di layar ponsel, dan penulisan judul halaman pada tab browser.
+    Dalam formulir tersebut, pengguna dapat mencantumkan nama proyek atau berkas desain mereka serta memilih jumlah lapisan papan mulai dari satu hingga banyak lapisan. Tersedia juga kolom pengisian untuk menentukan dimensi lebar dan panjang papan dalam satuan milimeter serta jumlah kepingan yang ingin dipesan. Selain itu, pelanggan bebas memilih variasi warna pelindung papan seperti hijau, biru, merah, hitam, atau ungu, serta menentukan tingkat ketebalan bahan papan sirkuit yang diinginkan.
 
-- Line 7-8: Menghubungkan library eksternal via CDN, yaitu Bootstrap 5 (untuk layout/tombol) dan Bootstrap Icons (untuk ikon alat dan info).
+    Halaman ini juga dilengkapi dengan kolom catatan tambahan bagi teknisi produksi dan sebuah peringatan informasi mengenai sistem perhitungan harga otomatis. Terdapat tombol utama yang menonjol untuk mengirimkan data pesanan serta tombol navigasi untuk kembali ke halaman utama. Di bagian bawah, situs ditutup dengan kaki halaman yang mencantumkan identitas perusahaan sebagai penyedia manufaktur presisi tinggi. Secara keseluruhan, kode ini berfungsi untuk memudahkan proses pemesanan teknis secara daring dan terstruktur.
 
-- Line 9-11: Menghubungkan file CSS Eksternal buatan sendiri agar desain konsisten dengan halaman utama, serta penutup bagian head.
+* File style.css
+    ini merupakan kumpulan aturan desain atau gaya yang digunakan untuk mempercantik tampilan situs web PCB-KAL. Secara umum, kode ini mengatur agar halaman memiliki jenis tulisan yang modern serta warna latar belakang abu-abu terang yang bisa berubah menjadi gelap secara halus. Terdapat pengaturan khusus untuk bagian spanduk utama yang menggunakan gambar latar belakang dengan efek transparan hitam agar tulisan di atasnya tetap mudah dibaca.
 
-2. Navigasi (Line 12-23)
-- Line 12-13: Pembukaan tag body dengan latar belakang abu-abu muda (bg-light) dan pembuatan bilah navigasi gelap (bg-dark).
+    Bagian kartu produk diatur agar memiliki sudut yang membulat dan memberikan efek interaktif saat disentuh atau disorot oleh kursor. Jika kursor diletakkan di atas gambar produk, kartu akan sedikit terangkat dan gambar akan membesar secara perlahan untuk memberikan kesan dinamis. Begitu pula dengan kartu panel pantau yang menampilkan angka-angka statistik, semuanya didesain agar memiliki bayangan halus dan perubahan warna bingkai saat pengguna berinteraksi dengannya.
 
-- Line 14-15: Kontainer navbar dan pembuatan logo "PCB-KAL" yang menggunakan ikon CPU sebagai identitas visual.
+    Kode ini juga menyediakan pengaturan lengkap untuk mode malam yang secara otomatis mengubah warna latar belakang menjadi hitam pekat dan menyesuaikan warna teks serta kotak masukan menjadi lebih redup agar nyaman di mata. Selain itu, terdapat aturan responsif yang memastikan tampilan situs tetap rapi saat dibuka melalui perangkat dengan layar kecil seperti ponsel, di mana ukuran tulisan dan tinggi gambar akan menyesuaikan secara otomatis. Secara keseluruhan, kode ini berfungsi untuk memberikan pengalaman visual yang menarik dan fungsional bagi pengunjung situs.
 
-- Line 16-21: Menu navigasi yang diletakkan di sebelah kanan (ms-auto), di mana menu "Cetak PCB" diberi class active untuk menandakan posisi halaman saat ini.
-- Line 22-23: Penutup struktur navbar.
+* File script.js
+     Didalam sini berisi logika utama atau otak di balik fungsi interaktif pada situs web PCB-KAL. Fungsi pertama yang dijalankan adalah pengatur tema warna, di mana sistem akan mengingat pilihan pengguna apakah ingin menggunakan mode terang atau gelap melalui penyimpanan lokal pada peramban. Jika tombol lampu ditekan, tampilan seluruh halaman akan berubah warna dan ikon tombol akan berganti secara otomatis.
 
-3. Layout Utama & Judul Form (Line 25-34)
-- Line 25-27: Penggunaan kontainer Bootstrap dengan margin vertikal (my-5) dan sistem grid untuk memposisikan form di tengah layar laptop (justify-content-center).
+    Bagian kedua dari kode ini mengelola daftar keinginan atau wishlist. Sistem ini bekerja dengan menyimpan data barang yang Anda pilih ke dalam memori sementara peramban. Setiap kali Anda menekan tombol wishlist pada suatu produk, sistem akan memeriksa apakah barang tersebut sudah ada di daftar atau belum guna menghindari penggandaan. Selain produk toko, formulir pesanan kustom papan sirkuit juga bisa disimpan ke dalam daftar keinginan ini lengkap dengan detail spesifikasi teknisnya.
 
-- Line 28-30: Pembuatan elemen Card putih yang bersih tanpa border, dengan bayangan halus (shadow-sm) sebagai wadah utama form.
+    Selain mengelola daftar, kode ini juga menangani aksi pembelian produk secara sederhana. Saat tombol beli ditekan, sistem akan otomatis mengurangi angka stok yang tertera di layar dan memberikan pesan konfirmasi kepada pengguna. Terdapat juga fungsi untuk menghapus barang satu per satu dari daftar keinginan atau membersihkan seluruh daftar sekaligus melalui tombol hapus semua.
 
-- Line 31-34: Bagian header di dalam kartu yang berisi judul besar berwarna hijau (text-success) dengan ikon perkakas, serta teks instruksi kecil untuk pengguna.
-
-4. Input Data Teknis - Baris 1 & 2 (Line 36-61)
-- Line 36-37: Pembukaan tag form dan baris pertama untuk input data.
-
-- Line 38-41: Input teks untuk nama proyek atau file Gerber. Dilengkapi dengan atribut required agar form tidak bisa - dikirim jika kosong.
-
-- Line 42-49: Input pilihan (select) untuk jumlah lapisan PCB (layer), mulai dari satu hingga banyak lapisan.
-
-- Line 52-61: Baris kedua yang berisi tiga kolom input angka untuk dimensi Lebar, Panjang, dan Jumlah Pcs. Terdapat batas minimum min="10" untuk ukuran pcb demi validasi teknis.
-
-5. Konfigurasi Material & Catatan (Line 63-83)
-- Line 63-64: Pembukaan baris ketiga untuk detail material.
-
-- Line 65-74: Pilihan dropdown untuk Warna Solder Mask (lapisan cat pelindung) dengan berbagai variasi warna industri.
-
-- Line 75-81: Pilihan dropdown untuk menentukan Ketebalan Papan standar industri (0.8mm hingga 2.0mm).
-
-- Line 84-87: Area teks (textarea) untuk pengguna memberikan instruksi khusus atau catatan tambahan kepada tim teknisi manufaktur.
-
-6. Informasi Biaya & Tombol Aksi (Line 89-97)
-- Line 89-91: Penggunaan komponen Alert Info berwarna biru sebagai pengingat otomatis bahwa harga bersifat kalkulatif berdasarkan luas area pcb.
-
-- Line 93-97: Bagian akhir form yang berisi tombol submit besar berwarna hijau (btn-lg) dan tombol sekunder untuk membatalkan serta kembali ke halaman dashboard utama.
-
-7. Footer & Script (Line 101-105)
-- Line 101-103: Bagian kaki halaman (footer) dengan desain gelap yang mencantumkan hak cipta tahun 2026.
-
-- Line 105-107: Pemanggilan JavaScript Bootstrap untuk mendukung interaksi elemen, serta penutup dokumen HTML.
-
-* File tyle.css
-1. Pengaturan Dasar & Tipografi (Line 1-5)
-- Line 1-5: Mengatur tampilan dasar seluruh halaman (body). Menggunakan font 'Segoe UI' agar terlihat modern dan profesional. background-color disetel abu-abu sangat muda agar mata tidak cepat lelah, dan warna teks utama disetel abu-abu gelap (#333) untuk kontras yang baik.
-
-2. Navigasi & Hero Section (Line 7-23)
-- Line 7-9: Memberikan efek bayangan halus (box-shadow) pada Navbar agar terlihat terpisah dari konten saat pengguna melakukan scrolling.
-
-- Line 11-20: Mengatur area Hero (header utama). Di sini digunakan teknik linear-gradient untuk menumpuk warna hitam transparan di atas gambar background.png. Ini berfungsi sebagai overlay agar teks tetap terbaca jelas. Properti display: flex digunakan untuk memastikan konten teks berada tepat di tengah area header.
-
-- Line 22-25: Menambahkan efek bayangan teks (text-shadow) pada judul utama agar lebih menonjol dan memberikan jarak antar huruf (letter-spacing) untuk kesan desain premium.
-
-3. Desain Kartu Produk & Animasi (Line 27-40)
-- Line 27-31: Mengatur tampilan Card produk. transition disiapkan agar saat ada perubahan (seperti hover), gerakannya halus. border-radius: 10px membuat sudut kartu membulat, dan overflow: hidden memastikan gambar di dalamnya tidak keluar dari sudut bulat tersebut.
-
-- Line 33-36: Mengatur efek Hover (saat kursor di atas kartu). Kartu akan bergerak ke atas sejauh 10px (translateY) dan bayangannya menjadi lebih tebal. Ini memberikan pengalaman interaktif yang modern bagi pengguna.
-
-- Line 38-40: Memberikan ruang napas (padding) di dalam badan kartu agar teks tidak menempel ke pinggir.
-
-4. Tipografi Produk & Tombol (Line 42-59)
-- Line 42-45: Mengatur ukuran font judul produk agar konsisten di angka 1.2rem dan memberikan jarak bawah agar tidak terlalu rapat dengan deskripsi.
-
-- Line 47-52: Kustomisasi tombol Success. Warna hijau diubah menjadi hijau tua khas PCB (#2d5a27). Tombol dibuat lebih tebal dan diberikan efek transisi agar terasa responsif saat diklik.
-
-- Line 54-57: Mengatur perilaku tombol saat disentuh kursor (hover). Warna hijau akan menjadi lebih gelap dan muncul bayangan di bawah tombol untuk memberikan efek kedalaman.
-
-5. Form Interaktif & Footer (Line 61-68)
-- Line 61-64: Mengatur tampilan Input dan Select saat sedang diketik (focus). Garis pinggir dan bayangan akan berubah menjadi hijau tua. Ini membantu pengguna mengetahui bagian mana yang sedang mereka isi (UX yang baik).
-
-- Line 66-68: Memberikan aksen garis hijau tua di bagian atas Footer untuk mempertegas batas akhir halaman dan menjaga konsistensi identitas warna brand PCB-KAL.
+    Terakhir, tersedia fitur untuk mengosongkan kembali formulir pesanan kustom jika pengguna ingin memulai pengisian dari awal. Semua data yang ditampilkan pada lencana angka di bagian menu navigasi akan selalu diperbarui secara otomatis setiap kali ada perubahan data. Secara keseluruhan, skrip ini memastikan semua tombol dan formulir di situs web dapat berfungsi dengan baik dan memberikan tanggapan langsung kepada pengguna.
